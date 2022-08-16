@@ -26,6 +26,7 @@ ul {
 body {
   width: 100%;
   height: 100vh;
+
   background-color: #00c2b6;
 }
 
@@ -115,6 +116,12 @@ header {
 }
 
 /*change background color c*/
+
+.bg-5 {
+  background-color: #00c2b6;
+  z-index: -1;
+}
+
 .bg-4 {
   background-color: #ff651a;
   z-index: -1;
@@ -194,6 +201,10 @@ footer {
   align-items: center;
 }
 
+.magazine-issue-links .contact-me {
+  display: none;
+}
+
 .magazine-issue-links ul li a:hover {
   text-decoration: underline;
 }
@@ -207,5 +218,81 @@ footer {
 
   100% {
     opacity: 1;
+  }
+}
+
+/* Media queries */
+
+@media (max-width: 1024px) {
+  .magazine-about {
+    width: 28rem;
+  }
+}
+
+@media (max-width: 950px) {
+  html {
+    scroll-snap-type: none;
+  }
+
+  header {
+    position: static;
+    background-color: #00c2b6;
+  }
+
+  header .contact-me {
+    display: none;
+  }
+  footer {
+    position: static;
+    background-color: #e30512;
+  }
+
+  .magazine-issue-links ul {
+    display: none;
+  }
+
+  .magazine-issue-links .contact-me {
+    display: inline;
+  }
+}
+
+@media (max-width: 765px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  .magazine-about {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  .magazine-issue-links {
+    text-align: center;
+    align-self: center;
+    padding-bottom: 3rem;
+  }
+
+  .magazine-issue-links .contact-me {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .logo {
+    width: 50%;
+  }
+
+  .magazine-img {
+    width: 80%;
+  }
+
+  .magazine-text {
+    padding: 0 2rem;
+  }
+
+  .magazine-stores {
+    font-size: 1.5rem;
   }
 }
